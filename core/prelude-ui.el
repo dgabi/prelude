@@ -74,13 +74,13 @@
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
-      '("" invocation-name " Prelude - " (:eval (if (buffer-file-name)
+      '("" invocation-name " - " (:eval (if (buffer-file-name)
                                             (abbreviate-file-name (buffer-file-name))
                                           "%b"))))
 
 ;; use zenburn as the default theme
-;;(when prelude-theme
-;;  (load-theme prelude-theme t))
+(when prelude-theme
+  (load-theme prelude-theme t))
 
 ;; show available keybindings after you start typing
 ;; add to hook when running as a daemon as a workaround for a
